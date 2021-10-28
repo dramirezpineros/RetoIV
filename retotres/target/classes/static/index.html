@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reto III</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+
+</head>
+
+<style>
+    :root {
+            --very-light-pink: #c7c7c7;
+            --hospital-green: #acd9b2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px
+        }
+    .label {
+        background-color: var(--text-input-field);
+        border: none;
+        border-radius: 8px;
+        height: 32px;
+        font-size: var(--md);
+        padding: 6px;
+        margin: 2px;
+    }
+    .primary-button {
+        background-color: var(--hospital-green);
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        width: 30%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: bold;
+        height: 40px;
+        margin-bottom: 12px;
+    }
+    .all {
+        display: grid;
+        place-items: center;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .second-botton{
+        background-color: skyblue;
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        width: 30%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: bold;
+        height: 40px;
+        margin-bottom: 12px;
+    }
+    .ph-center::-webkit-input-placeholder {
+        text-align: center;
+        line-height: 100px;/* Centrado vertical */
+    }
+   </style>
+
+<body class="all">
+    <h1>Interfaz grafica</h1>
+
+
+    <hr width=100% color="#c7c7c7" size="1">
+    <h2>CATEGORY</h2>
+    <div class="uno" id="resultadoc"></div>
+    <button onclick="traerInformacion()" class="second-botton"> Consultar </button>
+
+    <div>
+        <input class="label ph-center" type="text" id="name" placeholder="name">
+        <input class="label ph-center" type="text" id="descriptionc" placeholder="description">
+    </div>
+
+    <button class="primary-button" onclick="guardarInformacion()">Guardar!</button>
+    <button class="primary-button" onclick="editarInformacion()">Actualizar!</button>
+
+
+    <!-- ----------------------------------------------------------- -->
+
+    <hr width=100% color="#c7c7c7" size="1">
+
+    <h2>AUDIENCE</h2>
+    <div class="uno" id="resultadob"></div>
+    <button onclick="traerInformacionb()" class="second-botton"> Consultar </button>
+
+    <div>
+        <input class="label ph-center" type="text" id="brand" placeholder="Brand">
+        <input class="label ph-center" type="number" id="year" placeholder="Year">
+        <input class="label ph-center" type="number" id="category" placeholder="Category">
+        <input class="label ph-center" type="text" id="description" placeholder="Description">
+        <input class="label ph-center" type="text" id="nameb" placeholder="Name">
+
+        
+        
+    </div>
+
+    <button class="primary-button" onclick="guardarInformacionb()">Guardar!</button>
+    <button class="primary-button" onclick="editarInformacionb()">Actualizar!</button>
+
+
+    <!-- ----------------------------------------------------------- -->
+
+    <hr width=100% color="#c7c7c7" size="1">
+    <h2>CLIENT</h2>
+    <div class="uno" id="resultadocl"></div>
+    <button onclick="traerInformacioncl()" class="second-botton"> Consultar </button>
+
+    <div>
+        <input class="label ph-center" type="text" id="emailCl" placeholder="email">
+        <input class="label ph-center" type="text" id="passwordCl" placeholder="password">
+        <input class="label ph-center" type="text" id="nameCl" placeholder="Name">
+        <input class="label ph-center" type="number" id="ageCl" placeholder="age">
+
+    </div>
+
+    <button class="primary-button" onclick="guardarInformacioncl()">Guardar!</button>
+    <button class="primary-button" onclick="editarInformacioncl()">Actualizar!</button>
+
+    <!-- ----------------------------------------------------- -->
+
+    <hr width=100% color="#c7c7c7" size="1">
+    <h2>MESSAGE</h2>
+    <div class="uno" id="resultadom"></div>
+    <button onclick="traerInformacionm()" class="second-botton"> Consultar </button>
+
+    <div>
+        <input class="label ph-center" type="text" id="messagetext" placeholder="Mensaje">
+        <input class="label ph-center" type="number" id="clientidme" placeholder="client">
+        <input class="label ph-center" type="number" id="bikeidme" placeholder="bike">
+
+    </div>
+    
+
+    <button class="primary-button" onclick="guardarInformacionm()">Guardar!</button>
+    <button class="primary-button" onclick="editarInformacionm()">Actualizar!</button>
+
+    <!-- ----------------------------------------------------------- -->
+
+    <hr width=100% color="#c7c7c7" size="1">
+    <h2>RESERVATION</h2>
+    <div class="uno" id="resultadore"></div>
+    <button onclick="traerInformacionre()" class="second-botton"> Consultar </button>
+
+    <div>
+        <input class="label ph-center" type="number" id="clientidre" placeholder="client">
+        <input class="label ph-center" type="number" id="bikeidre" placeholder="bike">
+        <input class="label ph-center" type="date" id="startDate" placeholder="startDate">
+        <input class="label ph-center" type="date" id="devolutionDate" placeholder="devolutionDate">
+
+
+        
+        
+    </div>
+
+    <button class="primary-button" onclick="guardarInformacionre()">Guardar!</button>
+    <button class="primary-button" onclick="editarInformacionre()">Actualizar!</button>
+
+
+    <!-- ----------------------------------------------------------- -->
+
+</body>
+
+
+</html>
